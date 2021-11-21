@@ -1,0 +1,7 @@
+name: RPG
+version: '${version}'
+description: RPG do Modernal
+api-version: 1.17
+author: GiverPlay
+website: 'https://giverplay.me'
+main: me.giverplay.rpg.RPG
