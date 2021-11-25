@@ -1,0 +1,11 @@
+Furnace:
+  Dinheiro:
+    Source: DIAMOND
+    Result: PAPER
+    DisplayName: "&e&lDinheiro"
+    Lore:
+      - " "
+      - " &aValor: &f$10.0"
+      - " "
+    Exp: 25
+    Time: 60

@@ -4,6 +4,8 @@ import me.giverplay.rpg.managers.RecipeManager
 import org.bukkit.plugin.java.JavaPlugin
 
 class RPG : JavaPlugin() {
+  val recipeManager = RecipeManager(this)
+
   override fun onEnable() {
     logger.info("Sup World")
     reload()
@@ -13,6 +15,6 @@ class RPG : JavaPlugin() {
     saveDefaultConfig()
     reloadConfig()
 
-    RecipeManager(this)
+    recipeManager.loadRecipes()
   }
 }
