@@ -6,6 +6,13 @@ import org.bukkit.plugin.java.JavaPlugin
 class RPG : JavaPlugin() {
   override fun onEnable() {
     logger.info("Sup World")
+    reload()
+  }
+
+  fun reload() {
+    saveDefaultConfig()
+    reloadConfig()
+
     RecipeManager(this)
   }
 }
