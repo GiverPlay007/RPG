@@ -31,6 +31,9 @@ public class RecipeManager {
   }
 
   public void loadRecipes() {
+    recipes.keySet().forEach(plugin.getServer()::removeRecipe);
+    recipes.clear();
+
     try {
       config.load(new File(plugin.getDataFolder(), "recipes.yml"));
     } catch (IOException | InvalidConfigurationException e) {
