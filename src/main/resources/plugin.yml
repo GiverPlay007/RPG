@@ -8,3 +8,6 @@ main: me.giverplay.rpg.RPG
 commands:
   rpg:
     description: Comando principal
+  createrecipe:
+    description: Criar novas receitas
+    aliases: ['criarreceita', 'novareceita']

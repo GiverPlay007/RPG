@@ -64,12 +64,15 @@ public class RecipeManager {
       meta.setLore(lore);
       resultItem.setItemMeta(meta);
 
-      NamespacedKey namespace = new NamespacedKey(plugin, key);
-      FurnaceRecipe recipe = new FurnaceRecipe(namespace, resultItem, source, exp, time);
-      plugin.getServer().addRecipe(recipe);
-      recipes.put(namespace, recipe);
-
+      registerRecipe(key, source, resultItem, exp, time);
       plugin.getLogger().fine("Loaded furnace recipe %s → %s (%s)".formatted(source.name(), result.name(), key));
     }
+  }
+
+  public void registerRecipe(String name, Material source, ItemStack result, float exp, int time) {
+    NamespacedKey namespace = new NamespacedKey(plugin, name);
+    FurnaceRecipe recipe = new FurnaceRecipe(namespace, result, source, exp, time);
+    plugin.getServer().addRecipe(recipe);
+    recipes.put(namespace, recipe);
   }
 }
