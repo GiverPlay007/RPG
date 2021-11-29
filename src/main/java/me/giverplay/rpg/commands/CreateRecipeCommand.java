@@ -80,7 +80,7 @@ public class CreateRecipeCommand implements CommandExecutor {
         return true;
       }
 
-      plugin.getRecipeManager().registerRecipe(args[0], source, result, exp, time);
+      plugin.getRecipeManager().registerRecipe(args[1], source, result, exp, time);
       player.sendMessage(ChatColor.GREEN + "Receita criada com sucesso!");
       return true;
     }
